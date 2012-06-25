@@ -1,0 +1,1 @@
+User-agent: *Disallow: Disallow: /cgi-bin/Disallow: /auctions/Disallow: /css_styles/Disallow: /cutenews/Disallow: /flash/Disallow: /images/Disallow: /logos/Disallow: /perfeng/Disallow: /scripts/Disallow: /voteforgreg/Disallow: /sphider/Disallow: /reps.phpSitemap: http://www.pedistributors.com/sitemap.php

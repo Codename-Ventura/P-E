@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+	background-image:url(../images/bg/brownsite_bg.jpg);
+}
+
+form{
+	clear:none;
+	margin:0;
+	padding:0;
+	float:none;
+}
+
+label{
+	margin:0 0 0 .25em;
+}
+
+img{
+	border:none;
+	}
+	
+#content{
+	width:975px;
+	margin:0 auto 0 auto;
+	border-top:5px #c22824 solid;
+	font-family:Verdana, Verdana, Geneva, sans-serif;
+}
+
+#header{
+	width:100%;
+	background: url(../images/bg/gradient-shine.png) repeat-x;
+	float:left;
+	
+}
+
+	#header .logo{
+		float:left;
+	}
+	
+	
+	#header form{
+		float:right;
+	}
+
+	
+#clock{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-size:18px;
+	float:right;
+	}
+
+#top{
+	text-align:center;
+	width:100%;
+	margin:1em 0 0 0;
+	float:left;
+}
+
+.right_box{
+	float:right;
+	clear:right;
+	color:#D9DB95;
+	padding:0;
+	margin:0;
+    vertical-align: middle;
+	}
+
+.tri_box{
+	width:325px;
+	margin:1em 0 0 0;
+	float:left;
+	text-align:center;
+	padding:.25em 0 .25em 0;
+	border-top:1px #55401e solid;
+border-bottom:1px #55401e solid;
+	}
+	
+	
+input.text{
+	border: 1px solid #5d4b31;
+	background-color:#1e1100;
+	padding:.2em;
+	margin:0 .25em 0 .25em;
+	width:300px;
+	color:#D1C7AC;
+}
+
+input.text:hover{
+	border: 1px solid #d32926 !important;
+}
+
+input.btn{
+	border: 1px solid #5d4b31;
+	background-color:#503f26;
+	padding:.2em;
+	margin:0;
+	cursor:pointer;
+	color: #bbc397!important;
+	font-weight:600;
+}
+
+input.btn:hover{
+	border: 1px solid #ffffff !important;
+}

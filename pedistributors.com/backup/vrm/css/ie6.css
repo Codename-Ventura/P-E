@@ -1,0 +1,36 @@
+#fancymenu ul li a {
+cursor: hand; 
+position: relative !important;
+z-index: 100001;
+}
+
+#menu_home a {
+background: url('../menu/newconcept_menu_1.gif') no-repeat center !important;
+}
+
+#menu_about a {
+background: url('../menu/newconcept_menu_2.gif') no-repeat center !important;
+}
+  
+#menu_portfolio a {
+background: url('../menu/newconcept_menu_3.gif') no-repeat center !important;
+}
+
+#menu_services a {
+background: url('../menu/newconcept_menu_4.gif') no-repeat center !important;
+}
+
+#menu_resources a {
+background: url('../menu/newconcept_menu_5.gif') no-repeat center !important;
+}
+
+#menu_links a {
+background: url('../menu/newconcept_menu_5.gif') no-repeat center !important;
+cursor: hand; 
+position: relative !important;
+z-index: 100001;
+}
+
+#menu_contact a {
+background: url('../menu/newconcept_menu_6.gif') no-repeat center !important;
+}

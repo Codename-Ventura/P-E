@@ -1,0 +1,96 @@
+/* 
+  -----------------------------------
+  PopMenu Magic Style Sheet
+  by Project Seven Development
+  www.projectseven.com
+  Menu Type: Horizontal
+  Style Theme:0 -Basic Style
+  -----------------------------------
+*/
+#p7PMnav {
+	margin: 0;
+	padding:0;
+}
+#p7PMnav li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#p7PMnav ul {
+	margin: 0;
+	padding: 0;
+	background-color: #666666;
+	border: 1px solid #CCCCCC;
+	position: absolute;
+	left: -9000px;
+	z-index: 10000;
+}
+#p7PMnav a {
+	display: block;
+	text-decoration: none;
+	padding: 6px 10px 6px 12px;
+	color: #FFFFFF;
+	line-height:1;
+	background-color: #000000;
+}
+#p7PMnav a:hover, #p7PMnav a:active, #p7PMnav a:focus {
+	color: #FFFFFF;
+	letter-spacing: .01px;
+	background-color: #666666;
+}
+
+/* ------ the current page marker style ------ */
+#p7PMnav .p7PMmark {
+	color: #CCCCCC;
+	font-weight: bold;
+}
+/* ------ the trigger link styles ------- */
+
+/*the trigger link */
+#p7PMnav ul .p7PMtrg, #p7PMnav ul .p7PMon {
+	background-color: #999999;
+}
+/* the active trigger link style */
+#p7PMnav .p7PMon {
+	color: #CCCCCC;
+}
+/*the submenu classes */
+
+#p7PMnav .p7PMhide {
+	left: 1000px;
+}
+#p7PMnav .p7PMshow {
+	left: auto;
+	z-index: 20000 !important;
+}
+/* Top level menu width */
+#p7PMnav li {
+	float: left;
+	width: 116px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+#p7PMnav ul li {
+	float: none;
+}
+#p7PMnav ul, #p7PMnav ul li {
+	width: 116px;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	color: #000000;
+}
+#p7PMnav ul li a{
+background-image:none;
+font-size:80%;
+}
+#p7PMnav ul li a:hover
+{
+background: #666666;
+}

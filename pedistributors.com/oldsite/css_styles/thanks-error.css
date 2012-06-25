@@ -1,0 +1,187 @@
+﻿/* Tag Styles */
+
+BODY {
+  
+  background-color: #EEE;
+  margin: 20px;
+}
+
+P, SPAN {  
+  
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 9pt;
+  line-height: 200%;
+  
+  margin: 0 20px 10px 50px;
+  padding:0 0 0 1em;
+  
+}
+
+a:link, a:visited {
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 9pt;
+  color: #55A1D5;  
+
+}
+
+b {
+  color: #269;
+}
+
+/* Layout & Column Styles */
+
+DIV.TwoColumnContainer {
+  width: 100%;
+}
+
+DIV.Column {
+  float: left;  
+}
+
+DIV.TwoColumnContainer DIV.Left {
+  margin: 0 0 0 20px;
+}
+
+DIV.TwoColumnContainer DIV.Right {
+  margin: 0 0 0 0;
+}
+
+
+DIV.ClearFloat {
+  clear: both;
+}
+
+/* Page Layout Styles */
+
+DIV#divFrame {  
+  width: 350px;
+  margin: 0 auto;  
+  min-height: 300px;
+}
+
+DIV#divFrameTop {
+  
+  width: 350px;
+  height: 10px;
+  
+  margin: 0;
+  
+  background-image: url(http://www.icontact.com/www/images/thx-err/bg-frame-top.png);
+  background-repeat: no-repeat;
+}
+
+DIV#divFrameBottom {
+  
+  width: 350px;
+  height: 12px;
+  
+  background-image: url(http://www.icontact.com/www/images/thx-err/bg-frame-bottom.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+
+DIV#divFrameContent {
+  min-height: 200px;  
+  margin: 0;  
+  
+  background-image: url(http://www.icontact.com/www/images/thx-err/bg-frame-middle.png);
+  background-repeat: repeat-y;
+}
+
+DIV#divFrameText {
+  min-height: 300px;
+  
+  background-image: url(http://www.icontact.com/www/images/thx-err/bg-stripes.png);
+  background-repeat: no-repeat;
+  background-position: 10px top;
+}
+
+DIV#divFrameText h1 {  
+  
+  color: #55A1D5;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 18pt;
+  font-weight: normal;
+  
+  text-indent: -999em;
+  border: 0px solid #FFF;  
+  background-repeat: no-repeat;  
+  margin: 0 auto 10px auto;
+  
+}
+
+H1.ThankYou { 
+  width: 245px;
+  height: 85px;
+  background-image: url(http://www.icontact.com/www/images/thx-err/thank-you.png);
+}
+
+H1.Error { 
+  width: 250px;
+  height: 80px;
+  background-image: url(http://www.icontact.com/www/images/thx-err/error.png);
+
+}
+
+H2 {  
+  color: #269;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 11pt;
+  font-weight: bold;
+  
+  display: inline;
+  margin: 0;
+  padding: 0 0 0 30px;
+}
+
+DIV#divBottomInfo  { 
+  margin-top: 20px;
+}
+
+DIV#divBottomInfo DIV {
+  
+  margin: 0;
+}
+
+IMG#imgLogo {
+  width: 160px;
+  height: 60px;
+  
+  border: 0px;
+  margin: 0 0 0 30px;
+}
+
+DIV#divFreeTrial {  
+  text-align: center;
+}
+
+DIV#divFreeTrial SPAN {
+  display: block;
+  font-size: 8pt;  
+  margin: 15px 0 0 15px;
+  padding: 0;
+  line-height: 100%;
+}
+
+DIV#divErrorMessage {
+  border: 1px solid #BBB;
+  background-color: #FEE;
+  min-height: 25px;
+  margin: 10px 20px 5px 30px;
+}
+
+DIV#divErrorMessage SPAN {  
+  display: block;
+  margin: 0;
+  padding: 2px 2px 2px 25px;
+  
+  font-size: 7pt;
+  font-family: Verdana, sans-serif;
+  
+  background-image: url(http://www.icontact.com/www/images/thx-err/redx.png);
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
+}
+
+

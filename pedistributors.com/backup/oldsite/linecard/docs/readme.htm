@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Particle Links Readme</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<a name="top"></a>
+<table width="75%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" align="center" style="border: #666666 1px solid;"><tr><td>
+<table width="100%" cellpadding="5" cellspacing="0" border="5">
+<tr>
+	<td>
+		<p class="sub1">Welcome<p>
+		<p>Welcome to the Particle Links readme.htm file, the hub of all documentation for Particle Links. There is a seperate readme with <strong><a href="upgrade.htm">upgrade</a></strong> instructions. Also if you have any problems, feature requests, bug reports and so forth, drop by the <a href="http://forums.particlesoft.net/">forums</a>.</p>
+		<p><span class="sub2">Contents</span></p>
+		<ul>
+			<li><a href="#licence">Licence</a></li>
+			<li><a href="#requirements">Requirements</a></li>
+			<ul>
+				<li><a href="#isrequired">What is Required</a></li>
+				<li><a href="#isntrequired">What isn't Required</a></li>
+			</ul>
+			<li><a href="#installation">Installation</a></li>
+			<ul>
+				<li><a href="#dbconfig">Database Configuration</a></li>
+				<li><a href="#installer">The Installer</a></li>
+				<li><a href="#installfolder">Delete Folder</a></li>
+			</ul>
+			<li><a href="#userguide">User Guide</a></li>
+			<ul>
+				<li><a href="#adminpanel">Admin Panel</a></li>
+				<li><a href="#moderationpanel">Moderation Panel</a></li>
+				<li><a href="#usingskins">Using Skins</a></li>
+				<li><a href="#usersystem">User System</a></li>
+				<li><a href="#staticurls">Static URLs</a></li>
+			</ul>
+			<li><a href="#credits">Credits</a></li>
+		</ul>
+		
+		<p><span class="sub2"><a name="licence"></a>Licence</span><br />
+		By using this software you show you have read and agree to the licence and terms of use. You can find them <strong><a href="licence.htm">here</a></strong>. It is worth noting that although this script may be free it is not open source.</p>
+		
+		<p><span class="sub2"><a name="licence"></a>Requirements</span><br />
+		Here contains information on what you will need to run the script.</p>
+		<p><a href="#top">Back to Top</a></p>
+		<p><strong><a name="isrequired"></a>What is required</strong><br />
+		You will need the following things:<br />
+		&#8226; PHP - the script is written in the <a href="http://www.php.net/">PHP</a> language<br />
+		&#8226; MySQL - currently only <a href="http://www.mysql.com/">MySQL</a> databases are supported
+		<p><a href="#top">Back to Top</a></p>
+		<p><strong><a name="isntrequired"></a>What isn't required</strong><br />
+		Things that you will not need:<br />
+		&#8226; Linux - the script has been tested on Windows and should run on all servers<br />
+		&#8226; Apache - the script works fine on IIS and should on other servers<br />
+		&#8226; JavaScript - although it improved usability, all the features work just fine for those who don't have JavaScript</p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><span class="sub2"><a name="Installation"></a>Installation</span><br />
+		Installing the software is pretty simple. This section will guide you through the steps to have your blog up and running in minutes.
+		<p><a href="#top">Back to Top</a></p>
+		<p><strong><a name="dbconfig"></a>Database configuration</strong><br />
+		In order to install the software you will need to create a MySQL database and a user which has permissions to access this database.</p>
+		<p>Once you have these, open up includes/config.php. Here you will need to enter your information. Usually you should be able to leave $dbhost and $dbprefix as default. You don't need to change these unless you know what your doing.</p>
+		<p>You will however need to change:</p>
+		<p>$dbuser = "";<br />
+		$dbpass = "";<br />
+		$dbname = "";</p>
+		<p>Enter the name of your database into $dbname such as $dbname = "mydatabase";. You also need to enter the username for the user who can access this database into $dbuser and the password for that user into $dbpass.</p>
+		<p>Once you have entered these values, save config.php and upload it to your web server. You may want to remove write permissions to it so that you do not overwrite it in future (although make sure it still has read permissions so the script can read it!).</p>
+		<p><a href="#top">Back to Top</a></p>
+		<p><strong><a name="installer"></a>Running the installer</strong><br />
+		Once you have uploaded the file you can access the installer and run the script:</p>
+		<p><a href="../install/install.php">install/install.php</a></p>
+		<p>If you are reading this on the website you will be able to click the above link but if not simply type the address into your web browser. The installer will then take you through each step.</p>
+		<p><a href="#top">Back to Top</a></p>
+		<p><strong><a name="installfolder"></a>Delete /install/</strong><br />
+		For security reasons, once you have run the installer you will need to delete the install folder from the web server. The rest of the script will not be accessable until you have done this.</p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><span class="sub2"><a name="userguide"></a>User Guide</span><br />
+		Here is a quick guide on how to use and admin your new site.
+		<p><a href="#top">Back to Top</a></p>
+		<p><strong><a name="adminpanel"></a>Admin Panel</strong><br />
+		To reach the admin panel visit admincp/ and enter your username and password. Here you can edit the site configuration. If you want to manage topics (categories) and links you need the moderation panel.</p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><strong><a name="moderationpanel"></a>Moderation Panel</strong><br />
+		This is also known as the editor panel. It appears at the bottom of each topic page once you are logged in. Therefore you need to log into the admin panel before you can use it. There are links to create, edit and delete topics and links on each topic page. These work best with JavaScript but will also work without.</p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><strong><a name="usingskins"></a>Using Skins</strong><br />
+		You can have multiple skins for your site. These are all controled via the skin editor which you can reach from the admin panel (you musted be logged in as a user who has admin rights). Particle Blue (ID #1) is the default.</p>
+		<p>There are a set of base templates already listed for each skin you create which use the default code. You can then customise these and if you want to go back to the original you can use revert to remove your customisations.</p>
+		<p>You can control the default skin shown to users by entering the skin's ID number into the configuration. Users can then change the skin via the skin selector box at the bottom of the page (unless it's been moved by the skin your using). If you don't want users doing this, disable it from the site's configuration.</p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><strong><a name="usersystem"></a>User System</strong><br />
+		As an admin you have the ability to create and edit users. This allows you to apoint other users to help you manage the site. There are two levels they can be set to moderator and admin. Moderators will be able to manage the directory - adding and editing topics and links, reviewing submissions, etc. Admins will have unrestricted access to the site just as your admin account does.</p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><strong><a name="staticurls"></a>Static URLs</strong><br />
+		The script supports static / friendly URLS for the directory pages so you can turn example.com/index.php?topic=/Music/Pop_Music/ into example.com/Music/Pop_Music/ which is a lot easier to read. This can currently <u>only be done on Apache</u> (or ASP.net if you build your own rewrite engine). All you need to do is change the topic page in the config to / and add the following to your .htaccess page (if you don't have one create a black one in the directory the script is in or just copy the one in the resources folder (inside the docs folder).</p>
+		<p>Options +FollowSymLinks<br />
+		RewriteEngine on<br />
+		RewriteOptions MaxRedirects=10<br />
+		RewriteCond %{REQUEST_FILENAME} !-f<br />
+		RewriteCond %{REQUEST_FILENAME} !-d<br />
+		RewriteRule ^([^\.]+)/$ index.php?topic=$1/ [QSA,L]</p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><span class="sub2"><a name="credits"></a>Credits</span><br />
+		Particle Links was created and developed by <a href="http://www.particlesoft.net/">Particle Soft</a>.</p>
+		<p><a href="#top">Back to Top</a></p>
+	</td>
+</tr>
+</table>
+</td></tr></table>
+<center>&nbsp;<br />&copy; 2005-2006 <a href="http://www.particlesoft.net/">Particle Soft</a></center>
+</body>
+</html>

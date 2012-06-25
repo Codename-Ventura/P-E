@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Particle Links Upgrading Guide</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<a name="top"></a>
+<table width="75%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" align="center" style="border: #666666 1px solid;"><tr><td>
+<table width="100%" cellpadding="5" cellspacing="0" border="5">
+<tr>
+	<td>
+		<p class="sub1">Upgrading<p>
+		<p>A guide to upgrading from a previous version. Read <strong>all that apply</strong>, eg, if you are upgrading from RC1, read the notes on RC2, RC3, etc all the way up to the latest version so you don't miss anything. You do not however have to run all the upgrade scripts, this is done automatically when you run the first one. Just check the other sections for template updates, config changes, etc.</p>
+		
+		<ul>
+			<li><a href="#rc1">From Release Candidate 1</a></li>
+			<li><a href="#rc2">From Release Candidate 2</a></li>
+			<li><a href="#rc3">From Release Candidate 3</a></li>
+			<li><a href="#rc4">From Release Candidate 4</a></li>
+			<li><a href="#1.0.0">From version 1.0.0</a></li>
+			<li><a href="#1.1.0">From version 1.1.0</a></li>
+			<li><a href="#1.2.0">From version 1.2.0</a></li>
+			<li><a href="#1.2.1">From version 1.2.1</a></li>
+			<li><a href="#1.2.2">From version 1.2.2</a></li>
+		</ul>
+		
+		<p><strong id="rc1">From Release Candidate 1</strong><br />
+		A lot has changed since release candidate 1 so just delete everything from the server (files have been moved, deleted, added there is loads) and upload everything from the new package. Watch out not to overwrite your old config file though!</p>
+		
+		<p>Also, if you are using .htaccess to create static URLs then you need to update your .htaccess. The only chance you need to make is add QSA into the [L], ie, change it to [QSA,L] or just copy it accross from the readme file or sample .htaccess file in the resources directory.</p>
+		
+		<p>Run install/upgrade/from_rc1.php. This will take care of all the SQL changes. Once this is done remove the installation directory then go to the config editor as there are new config options. The date format you can leave as default as can you for default skin. Just check the setting for virtual path is correct.
+		</p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><strong id="rc2">From Release Candidate 2</strong><br />
+		Backup your files and data then grab the changed files and upload them over the existing files. Now run install/upgrade/from_rc2.php and this will take care of the database changes. Finally delete the installation directory and you're done.</p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><strong id="rc3">From Release Candidate 3</strong><br />
+		Get the changed files and upload them. Now run install/upgrade/from_rc3.php. This will make the SQL changes and attempt to patch the templates that need changing. If you have some heavily customised templates though you may want to check &lt;a href=&quot;{ROOT}admin.php&quot;&gt;Admin&lt;/a&gt; has been replaced by {ADMIN_LINK} (normally in overall_header).</p>
+		<p>It is recommended you take a look at the admin panel also as there are several changes to the config settings which you may want to change to suite your site. Also as there are JavaScript changes, do a hard refresh or empty your cache the first time you moderate a topic.</p>
+		<p>You may also want (although it's not essential) to update the CSS for your skinsets by added the following to it:</p>
+		<p><textarea cols="60" rows="5" class="code">.invisible A:link, .invisible A:visited, .invisible A:active{
+	color: #99CC66;
+	text-decoration: underline;
+}
+.invisible A:hover{
+	color: #FF0000;
+	text-decoration: underline;
+}</textarea></p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><strong id="rc4">From Release Candidate 4</strong><br />
+		Backup your files and data then grab the changed files and upload them over the existing files. Also delete docs/resources/backend.css as it's now been moved. Now run install/upgrade/from_rc4.php and this will take care of the database changes. Finally delete the installation directory and you're done.</p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><strong id="1.0.0">From version 1.0.0</strong><br />
+		Backup your files and data then grab the changed files and upload them over the existing files. Run install/upgrade/from_1.0.0.php and this will take care of the database changes. Delete the installation directory.</p>
+		<p>Add the follwing to your CSS for each of your skinsets.</p>
+		<p><textarea cols="60" rows="5" class="code">.adminmenu{
+	background: #DDDDDD;
+	border: #999999 1px solid;
+}</textarea></p>
+		<p>Make the following template changes. In overall_footer find:</p>
+		<p><div class="code">All rights reserved.</div></p>
+		<p>Replace with:</p>
+		<p><div class="code">{ALLRIGHTSRESERVED}.</div></p>
+		<p>Find:</p>
+		<p><div class="code">Powered by</div></p>
+		<p>Replace with:</p>
+		<p><div class="code">{POWERED_BY}</div></p>
+		<p>In overall_header find:</p>
+		<p><div class="code">value="Search!"</div></p>
+		<p>Replace with:</p>
+		<p><div class="code">value="{SEARCH}!"</div></p>
+		<p>And you're done!</p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><strong id="1.1.0">From version 1.1.0</strong><br />
+		Backup your files and data then grab the changed files and upload them over the existing files. Run install/upgrade/from_1.1.0.php and this will take care of the database changes. Delete the installation directory.</p>
+		<p>There is some new code that needs to be added to the CSS of each skinset you have (if you haven't created any, you just need to add this to Particle Blue in the skin editor).</p>
+		<p><textarea cols="60" rows="5" class="code">.rules{
+	background: #CCCCCC;
+}
+.rules td{
+	background: #FFFFFF;
+}</textarea></p>
+		<p>If you have customised the templates you need to make the following change (if not see below). Open overall_header and find:</p>
+		<p><div class="code">&lt;html&gt;</div></p>
+		<p>Replace with:</p>
+		<p><div class="code">&lt;html lang="{LANGUAGE_CODE}"&gt;</div></p>
+		<p>If you haven't customised the templates then go into the skin editor and using the drop down where it says Edit Templates, delete both overall_header and overall_footer. These will then revert to the base templates and you won't need to update them again unless you customise them!</p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><strong id="1.2.0">From version 1.2.0</strong><br />
+		Backup your files and data then grab the changed files and upload them over the existing files. Run install/upgrade/from_1.2.0.php and this will take care of the database changes. Delete the installation directory.</p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><strong id="1.2.1">From version 1.2.1</strong><br />
+		Backup your files and data then grab the changed files and upload them over the existing files. Run install/upgrade/from_1.2.1.php and this will take care of the database changes. Delete the installation directory.</p>
+		
+		<p>If you have changed the phrases there are two new ones, submit_urlindirectory and rules. Also there is a new config option to stop URLs being submitted that are already in the directory, this is set to false by default and titleformat which allows you to re-arrange the page title on topic pages.</p>
+		<p><a href="#top">Back to Top</a></p>
+		
+		<p><strong id="1.2.2">From version 1.2.2</strong><br />
+		Backup your files and data. Download the complete package (changed files are not available as virtually every file has been changed) then delete all the files off your web server and upload the new ones. Alternatively upload the new ones over the top and see changelog.htm for which files you should delete (it's important certain files are removed so do, do this step).</p>
+		<p>If you are using static URLs you need to make changes to your .htaccess file. The following lines should be added after the RewriteOptions line.</p>
+		<p><div class="code">RewriteCond %{REQUEST_FILENAME} !-f<br />
+RewriteCond %{REQUEST_FILENAME} !-d</div></p>
+		<p>If you have customised your CSS code for Particle Blue, <strong>back it up</strong> as the upgrader will <strong>overwrite it</strong>! Run install/upgrade_from_1.2.2.php and then delete the install directory. There is one template change if you have customised your templates and if you have other skinsets there are new CSS classes you will want to add. There are changes to body, .editbox, .editorbox, .editorboxtab, .editorboxtop and .errormsg. Also .login and .adminmenu have been removed.</p>
+		<p>The template change is to overall_header so if you have customised this you will need to update it in each of the skinsets you have. Find:</p>
+		<p><div class="code">{CSS_CODE}<br />&lt;/style&gt;</div></p>
+		<p>Below, add:</p>
+		<p><div class="code">{HEAD_CODE}</div></p>
+		<p>It is also recommend you check and if possible revert overall_footer (as well as overall_header which saves you having to do the step above). This can be done by going to the admin panel and going to manage skins, then selecting edit templates from the options for each skin, scrolling down and selecting the templates from the list that appears and clicking the revert button.</p>
+		<p>There is a new option in the site configuration and a new phrase so if you have translated your installation you will want to address this. Beyond that you are finished.</p>
+		<p><a href="#top">Back to Top</a></p>
+	</td>
+</tr>
+</table>
+</td></tr></table>
+<center>&nbsp;<br />&copy; 2005-2006 <a href="http://www.particlesoft.net/">Particle Soft</a></center>
+</body>
+</html>

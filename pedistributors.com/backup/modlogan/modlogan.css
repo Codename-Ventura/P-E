@@ -1,0 +1,8 @@
+BODY {background: #eeeeee; }
+TH { font-family: arial,helvetica; font-size: 10pt; color: black; }
+TD { font-family: arial,helvetica; font-size: 10pt; color: black; background: #FFFFFF;}
+TD.TINYR { text-align: right; font-family: arial,helvetica; font-size: 9pt; color: black; }
+TD.CENTERB { text-align: center; font-weight: bolder; }
+TD.RIGHTB { text-align: right; font-weight: bolder; }
+TD.GROUPING { font-family: arial,helvetica; font-size: 10pt; color: black; background: #d0d0e0;}
+TD.MENU { background: #eeeeff;}

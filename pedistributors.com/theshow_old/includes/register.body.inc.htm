@@ -1,0 +1,136 @@
+
+<div class="title" style="width:35%; clear:left; float:left; margin-top:0">P&E : The Show 2010</div>
+<div class="title" style="background-image:url(images/bg/grey.jpg); text-align:left; margin-left:.25em; margin-top:0">Online Registration</div>
+	<div id="small_menu">
+		<?php include('includes/menu.php'); ?>
+	</div>
+   
+
+<div style="float:left; clear:both; width:100%; text-align:left; padding:1em; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:14px">
+Avoid wasting valuable shopping time at the Registration Desk the day of the show.  Pre-register each of your company's representatives in advance for prompt admission.  You can register online below, by phone at 800-251-2034, extension 232, or after filling in the required information below, print and fax the completed form to 615-851-4054.
+</div>
+
+<div style="clear:both; width:100%; background-color:#CCCCCC; text-align:left">
+<?php if(empty($_POST['theshow_register'])){?>
+<form method="post" name="registration">
+<table style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px" cellspacing="10" width="100%">
+	<tr><td colspan="4" style="text-align:center; font-size:16px">Registration Information</td></tr>
+    <tr>
+    <td style="text-align:right">Company Name:</td><td style="text-align:left"><input type="text" size="20" name="Company_Name" /></td>
+    <td style="text-align:right">Customer Number:</td><td style="text-align:left"><input type="text" size="20" name="Customer_Number" /></td>
+    </tr>
+    <tr>
+    <td style="text-align:right">Address:</td><td style="text-align:left" colspan="3"><input type="text" size="70%" name="Address"/></td>
+    </tr>
+    <tr>
+    <td style="text-align:right">City:</td><td style="text-align:left"><input type="text" size="20" name="City" /></td>
+    <td style="text-align:right">State:</td><td style="text-align:left"><input type="text" size="5" name="State" /></td>
+    </tr>
+    <tr>
+    <td style="text-align:right"></td><td style="text-align:left"></td>
+    <td style="text-align:right">Zip Code:</td><td style="text-align:left"><input type="text" size="10" name="Zip_Code" /></td>
+    </tr>
+     <tr>
+    <td style="text-align:right">Contact Name:</td><td style="text-align:left"><input type="text" size="20" name="Contact_Name" /></td>
+    <td style="text-align:right">Phone Number:</td><td style="text-align:left"><input type="text" size="20" name="Phone_Number" /></td>
+    </tr>
+    
+</table>
+<table style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin-top:2em" width="100%">
+<tr><td style="text-align:center; font-size:11px" colspan="4">Please enter each person that will attend the show</td></tr>
+	<tr><td style="text-align:center">Name</td><td style="text-align:center">Title</td><td style="text-align:center" colspan="2">Has Authority to Purchase?</td></tr>
+    <tr><td style="text-align:center"><input type="text" size="20" name="attendee1_name"/></td><td style="text-align:center"><input type="text" size="20" name="attendee1_title" /></td><td style="text-align:center"><input type="radio" name="attendee1_auth" value="Yes"/><br />
+Yes</td><td style="text-align:center"><input type="radio" name="attendee1_auth" value="No" /><br />
+No</td></tr>
+    <tr><td style="text-align:center"><input type="text" size="20" name="attendee2_name" /></td><td style="text-align:center"><input type="text" size="20" name="attendee2_title" /></td><td style="text-align:center"><input type="radio" name="attendee2_auth" value="Yes" /><br />
+Yes</td><td style="text-align:center"><input type="radio" name="attendee2_auth" value="No" /><br />
+No</td></tr>
+    <tr><td style="text-align:center"><input type="text" size="20" name="attendee3_name" /></td><td style="text-align:center"><input type="text" size="20" name="attendee3_title" /></td><td style="text-align:center"><input type="radio" name="attendee3_auth" value="Yes"  /><br />
+Yes</td><td style="text-align:center"><input type="radio" name="attendee3_auth" value="No" /><br />
+No</td></tr>
+    <tr><td style="text-align:center"><input type="text" size="20" name="attendee4_name" /></td><td style="text-align:center"><input type="text" size="20" name="attendee4_title" /></td><td style="text-align:center"><input type="radio" name="attendee4_auth" value="Yes" /><br />
+Yes</td><td style="text-align:center"><input type="radio" name="attendee4_auth" value="No" /><br />
+No</td></tr>
+    <tr><td style="text-align:center"><input type="text" size="20" name="attendee5_name" /></td><td style="text-align:center"><input type="text" size="20" name="attendee5_title" /></td><td style="text-align:center"><input type="radio" name="attendee5_auth" value="Yes"/><br />
+Yes</td><td style="text-align:center"><input type="radio" name="attendee5_auth" value="No" /><br />
+No</td></tr>
+    <tr><td style="text-align:center"><input type="text" size="20" name="attendee6_name" /></td><td style="text-align:center"><input type="text" size="20" name="attendee6_title" /></td><td style="text-align:center"><input type="radio" name="attendee6_auth" value="Yes" /><br />
+Yes</td><td style="text-align:center"><input type="radio" name="attendee6_auth" value="No" /><br />
+No</td></tr>
+    <tr><td style="text-align:center"><input type="text" size="20" name="attendee7_name" /></td><td style="text-align:center"><input type="text" size="20" name="attendee7_title"/></td><td style="text-align:center"><input type="radio" name="attendee7_auth" value="Yes" /><br />
+Yes</td><td style="text-align:center"><input type="radio" name="attendee7_auth" value="No"/><br />
+No</td></tr>
+<tr style="background-color:#000000"><td colspan="4" style="text-align:center; font-size:18px; color:#CCCCCC"><a href="#" onclick="document.registration.submit();" style="color:#CCCCCC">Proceed to Next Step >></a>
+</table>
+<input type="hidden" name="theshow_register" value="add" />
+</form><?php }
+else {
+	foreach($_POST as $key=>$value){
+    if(!empty($value)){
+    	$_SESSION[registrar][$key] = $value;        
+        }
+	}
+?>
+<form method="post" name="registration">
+<table style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px" cellspacing="10" width="100%">
+	<tr><td colspan="4" style="text-align:center; font-size:16px">Registration Information</td></tr>
+    <tr>
+    <td style="text-align:right">Company Name:</td><td style="text-align:left"><?php if(!empty($_SESSION[registrar][Company_Name])){ echo stripslashes($_SESSION[registrar][Company_Name]); } else {?><input type="text" size="20" name="Company_Name" /> <?php } ?></td>
+    <td style="text-align:right">Customer Number:</td><td style="text-align:left"><?php if(!empty($_SESSION[registrar][Customer_Number])){ echo stripslashes($_SESSION[registrar][Customer_Number]); } else {?><input type="text" size="20" name="Customer_Number" /><?php } ?></td>
+    </tr>
+    <tr>
+    <td style="text-align:right">Address:</td><td style="text-align:left" colspan="3"><?php if(!empty($_SESSION[registrar][Address])){ echo stripslashes($_SESSION[registrar][Address]); } else {?><input type="text" size="70%" name="Address"/><?php } ?></td>
+    </tr>
+    <tr>
+    <td style="text-align:right">City:</td><td style="text-align:left"><?php if(!empty($_SESSION[registrar][City])){ echo stripslashes($_SESSION[registrar][City]); } else {?><input type="text" size="20" name="City" /><?php } ?></td>
+    <td style="text-align:right">State:</td><td style="text-align:left"><?php if(!empty($_SESSION[registrar][State])){ echo stripslashes($_SESSION[registrar][State]); } else {?><input type="text" size="5" name="State" /><?php } ?></td>
+    </tr>
+    <tr>
+    <td style="text-align:right"></td><td style="text-align:left"></td>
+    <td style="text-align:right">Zip Code:</td><td style="text-align:left"><?php if(!empty($_SESSION[registrar][Zip_Code])){ echo $_SESSION[registrar][Zip_Code]; } else {?><input type="text" size="10" name="Zip_Code" /><?php } ?></td>
+    </tr>
+     <tr>
+    <td style="text-align:right">Contact Name:</td><td style="text-align:left"><?php if(!empty($_SESSION[registrar][Contact_Name])){ echo $_SESSION[registrar][Contact_Name]; } else {?><input type="text" size="20" name="Contact_Name" /><?php } ?></td>
+    <td style="text-align:right">Phone Number:</td><td style="text-align:left"><?php if(!empty($_SESSION[registrar][Phone_Number])){ echo $_SESSION[registrar][Phone_Number]; } else {?><input type="text" size="20" name="Phone_Number" /><?php } ?></td>
+    </tr>
+        <tr>
+    <td style="text-align:right"></td><td style="text-align:left"></td>
+    <td style="text-align:right">Email Address:</td><td style="text-align:left"><input type="text" size="10" name="Email" /></td>
+    </tr>
+    
+</table>
+<table cellpadding="10" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin-top:2em" width="100%">
+<tr><td style="text-align:center; font-size:11px" colspan="4">Please enter each person that will attend the show</td></tr>
+	<tr><td style="text-align:center">Name</td><td style="text-align:center">Title</td><td style="text-align:center" colspan="2">Has Authority to Purchase?</td></tr>
+    <tr bgcolor="#A6A6A6"><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee1_name])){ echo $_SESSION[registrar][attendee1_name]; } else {?><input type="text" size="20" name="attendee1_name"/><?php } ?></td><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee1_title])){ echo $_SESSION[registrar][attendee1_title]; } else {?><input type="text" size="20" name="attendee1_title" /><?php } ?></td><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee1_auth])){ echo $_SESSION[registrar][attendee1_auth]; } else {?><input type="radio" name="attendee1_auth" value="Yes"/><br />
+Yes</td><td style="text-align:center"><input type="radio" name="attendee1_auth" value="no" /><br />
+No<?php } ?></td></tr>
+    <tr><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee2_name])){ echo $_SESSION[registrar][attendee2_name]; } else {?><input type="text" size="20" name="attendee2_name" /><?php } ?></td><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee2_title])){ echo $_SESSION[registrar][attendee2_title]; } else {?><input type="text" size="20" name="attendee2_title" /><?php }?></td><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee2_auth])){ echo $_SESSION[registrar][attendee2_auth]; } else {?><input type="radio" name="attendee2_auth" value="y" /><br />
+Yes</td><td style="text-align:center"><input type="radio" name="attendee2_auth" value="no" /><br />
+No<?php }?></td></tr>
+    <tr bgcolor="#A6A6A6"><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee3_name])){ echo $_SESSION[registrar][attendee3_name]; } else {?><input type="text" size="20" name="attendee3_name" /><?php } ?></td><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee3_title])){ echo $_SESSION[registrar][attendee3_title]; } else {?><input type="text" size="20" name="attendee3_title" /><?php } ?></td><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee3_auth])){ echo $_SESSION[registrar][attendee3_auth]; } else {?><input type="radio" name="attendee3_auth" value="yes"  /><br />
+Yes</td><td style="text-align:center"><input type="radio" name="attendee3_auth" value="no" /><br />
+No<?php } ?></td></tr>
+    <tr><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee4_name])){ echo $_SESSION[registrar][attendee4_name]; } else {?><input type="text" size="20" name="attendee4_name" /><?php } ?></td><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee4_title])){ echo $_SESSION[registrar][attendee4_title]; } else {?><input type="text" size="20" name="attendee4_title" /><?php } ?></td><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee4_auth])){ echo $_SESSION[registrar][attendee4_auth]; } else {?><input type="radio" name="attendee4_auth" value="yes" /><br />
+Yes</td><td style="text-align:center"><input type="radio" name="attendee4_auth" value="no" /><br />
+No<?php } ?></td></tr>
+    <tr><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee5_name])){ echo $_SESSION[registrar][attendee5_name]; } else {?><input type="text" size="20" name="attendee5_name" /><?php } ?></td><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee5_title])){ echo $_SESSION[registrar][attendee5_title]; } else {?><input type="text" size="20" name="attendee5_title" /><?php } ?></td><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee5_auth])){ echo $_SESSION[registrar][attendee5_auth]; } else {?><input type="radio" name="attendee5_auth" value="yes"/><br />
+Yes</td><td style="text-align:center"><input type="radio" name="attendee5_auth" value="no" /><br />
+No<?php } ?></td></tr>
+    <tr><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee6_name])){ echo $_SESSION[registrar][attendee1_name]; } else {?><input type="text" size="20" name="attendee6_name" /><?php } ?></td><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee6_title])){ echo $_SESSION[registrar][attendee1_name]; } else {?><input type="text" size="20" name="attendee6_title" /><?php } ?></td><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee6_auth])){ echo $_SESSION[registrar][attendee6_auth]; } else {?><input type="radio" name="attendee6_auth" value="yes" /><br />
+Yes</td><td style="text-align:center"><input type="radio" name="attendee6_auth" value="no" /><br />
+No<?php } ?></td></tr>
+    <tr><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee7_name])){ echo $_SESSION[registrar][attendee7_name]; } else {?><input type="text" size="20" name="attendee7_name" /><?php } ?></td><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee7_title])){ echo $_SESSION[registrar][attendee7_title]; } else {?><input type="text" size="20" name="attendee7_title"/><?php } ?></td><td style="text-align:center"><?php if(!empty($_SESSION[registrar][attendee7_auth])){ echo $_SESSION[registrar][attendee7_auth]; } else {?><input type="radio" name="attendee7_auth" value="yes" /><br />
+Yes</td><td style="text-align:center"><input type="radio" name="attendee7_auth" value="no"/><br />
+No<?php } ?></td></tr>
+<tr><td colspan="4" style="text-align:center; font-weight:600">Please review all information above, update where necessary, and choose a registration option below</td></tr>
+<tr style="background-color:#000000"><td colspan="2" style="text-align:center; font-size:18px; color:#CCCCCC"><a href="#" onclick="document.registration.submit();" style="color:#CCCCCC"><a href="includes/print_reg.php" style="color:#FFFFFF" target="_blank" onclick="document.registration.submit();">Print this to fax</a></td>
+<td colspan="2" style="text-align:center; font-size:18px; color:#CCCCCC"><a href="#" onclick="sendandmail();" style="color:#CCCCCC">Submit Electronically >></a></td></tr>
+</table>
+<input type="hidden" name="theshow_register" value="add" />
+</form>
+<?php
+     
+}
+?>
+</div>

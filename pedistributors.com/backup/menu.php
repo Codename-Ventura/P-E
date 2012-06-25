@@ -1,0 +1,1 @@
+<div style="float:right"><a href="pricer.php"><img src="images/pricer/p.jpg" border="0" /></a><a href="staging.php"><img src="images/pricer/s.jpg" border="0" /></a><a href="view2.php"><img src="images/pricer/v.jpg" border="0" /></a><a href="import.php"><img src="images/pricer/i.jpg" border="0" /></a></div>

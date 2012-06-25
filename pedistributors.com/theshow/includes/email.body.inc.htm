@@ -1,0 +1,88 @@
+
+<div class="title" style="width:35%; clear:left; float:left; margin-top:0">P&E : The Show 2010</div>
+<div class="title" style="background-image:url(images/bg/grey.jpg); text-align:left; margin-left:.25em; margin-top:0">Online Registration</div>
+	<div id="small_menu">
+		<?php include('includes/menu.php'); ?>
+	</div>
+   
+<?php
+$message = 
+'<html><head></head><body><table style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px" cellspacing="10" width="100%">
+	<tr><td colspan="4" style="text-align:center; font-size:16px">Registration Information</td></tr>
+    <tr>
+    <td style="text-align:right">Company Name:</td><td style="text-align:left">'.$_SESSION[registrar][Company_Name].'</td>
+    <td style="text-align:right">Customer Number:</td><td style="text-align:left">'.$_SESSION[registrar][Customer_Number].'</td>
+    </tr>
+    <tr>
+    <td style="text-align:right">Address:</td><td style="text-align:left" colspan="3">'.$_SESSION[registrar][Address].'</td>
+    </tr>
+    <tr>
+    <td style="text-align:right">City:</td><td style="text-align:left">'.$_SESSION[registrar][City].'</td>
+    <td style="text-align:right">State:</td><td style="text-align:left">'.$_SESSION[registrar][State].'</td>
+    </tr>
+    <tr>
+    <td style="text-align:right"></td><td style="text-align:left"></td>
+    <td style="text-align:right">Zip Code:</td><td style="text-align:left">'.$_SESSION[registrar][Zip_Code].'</td>
+    </tr>
+     <tr>
+    <td style="text-align:right">Contact Name:</td><td style="text-align:left">'.$_SESSION[registrar][Contact_Name].'</td>
+    <td style="text-align:right">Phone Number:</td><td style="text-align:left">'.$_SESSION[registrar][Phone_Number].'</td>
+    </tr>
+    
+</table>
+<table cellpadding="10" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin-top:2em" width="100%">
+<tr><td style="text-align:center; font-size:16px" colspan="4">Attendees</td></tr>
+	<tr><td style="text-align:center">Name</td><td style="text-align:center">Title</td><td style="text-align:center" colspan="2">Has Authority to Purchase?</td></tr>
+    <tr bgcolor="#A6A6A6"><td style="text-align:center">'.$_SESSION[registrar][attendee1_name].'</td><td style="text-align:center">'.$_SESSION[registrar][attendee1_title].'</td><td style="text-align:center" colspan="2">'.$_SESSION[registrar][attendee1_auth].'</td></tr>
+    <tr><td style="text-align:center">'.$_SESSION[registrar][attendee2_name].'</td><td style="text-align:center">'.$_SESSION[registrar][attendee2_title].'</td><td style="text-align:center" colspan="2">'.$_SESSION[registrar][attendee2_auth].'</td></tr>
+    <tr bgcolor="#A6A6A6"><td style="text-align:center">'.$_SESSION[registrar][attendee3_name].'</td><td style="text-align:center">'.$_SESSION[registrar][attendee3_title].'</td><td style="text-align:center" colspan="2">'.$_SESSION[registrar][attendee3_auth].'</td></tr>
+    <tr><td style="text-align:center">'.$_SESSION[registrar][attendee4_name].'</td><td style="text-align:center">'.$_SESSION[registrar][attendee4_title].'</td><td style="text-align:center" colspan="2">'.$_SESSION[registrar][attendee4_auth].'</td></tr>
+    <tr bgcolor="#A6A6A6"><td style="text-align:center">'.$_SESSION[registrar][attendee5_name].'</td><td style="text-align:center">'.$_SESSION[registrar][attendee5_title].'</td><td style="text-align:center" colspan="2">'.$_SESSION[registrar][attendee5_auth].'</td></tr>
+    <tr><td style="text-align:center">'.$_SESSION[registrar][attendee6_name].'</td><td style="text-align:center">'.$_SESSION[registrar][attendee6_title].'</td><td style="text-align:center" colspan="2">'.$_SESSION[registrar][attendee6_auth].'</td></tr>
+    <tr bgcolor="#A6A6A6"><td style="text-align:center">'.$_SESSION[registrar][attendee7_name].'</td><td style="text-align:center">'.$_SESSION[registrar][attendee7_title].'</td><td style="text-align:center" colspan="2">'.$_SESSION[registrar][attendee7_auth].'</td></tr>
+
+</table></body></html>';
+
+$name = "jjames@pedistributors.com";
+$name2 = "m.harris@pedistributors.com";
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+$headers .= "From: The Show 2010 <theshow@pedistributors.com>\n";
+$headers .= "X-Mailer: PHP's mail() Function\n";
+$subj = "The Show Registration";
+//mail($name, $subj, $message, $headers);
+mail($name2, $subj, $message, $headers);
+include('../includes/db.php');
+
+//Inserting into SQL
+$company_name = $_SESSION[registrar][Company_Name];
+$rand_num = rand(0,9999);
+if(empty($_SESSION[registrar][Customer_Number])){
+	$_SESSION[registrar][Customer_Number] = "na_".$rand_num;
+}
+
+$query_statement = "INSERT INTO `theshow` (`comp_name`,`cust_num`,`address`,`city`,`state`,`zip`,`contact`,`phone`) VALUES ('".$_SESSION[registrar][Company_Name]."','".$_SESSION[registrar][Customer_Number]."','".$_SESSION[registrar][Address]."','".$_SESSION[registrar][City]."','".$_SESSION[registrar][State]."','".$_SESSION[registrar][Zip_Code]."','".$_SESSION[registrar][Contact_Name]."','".$_SESSION[registrar][Phone_Number]."')";
+mysql_query($query_statement);
+
+
+
+$id = $_SESSION[registrar][Customer_Number];
+foreach($_SESSION['registrar']['attendees'] as $k=>$v){
+$people = implode("|",$v);
+	if(isset($attendees)){
+    	$attendees .= ";".$people;
+    }
+   else{
+   	$attendees = $people;
+   }
+
+}
+mysql_query("INSERT INTO `show_attendees` VALUES ('$id','$attendees')");
+session_destroy();
+?>
+<div style="float:left; font-family:Verdana, Arial, Helvetica, sans-serif; margin:2em; text-align:center">
+Your information has been submitted.<br />
+We look forward to seeing you February 13th
+<br />
+
+</div>

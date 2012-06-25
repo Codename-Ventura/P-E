@@ -1,0 +1,48 @@
+body{
+	background: #FFE5B1 url("bg.jpg") repeat-x;
+	background-attachment: fixed;
+	font-family: verdana, arial, sans-serif;
+	font-size: small;
+}
+.errormsg{
+	padding: 5px;
+	background: #DDDDDD;
+	border: #999999 1px solid;
+}
+h5{
+	border-top: #999999 1px solid;
+	border-left: #999999 1px solid;
+	border-right: #999999 1px solid;
+	margin: 0px;
+	padding: 3px;
+	background: #DDDDDD;
+}
+.menu{
+	margin-top: 20px;
+	background: #999999;
+	border-bottom: #999999 1px solid;
+}
+.menu a{
+	margin: 1px 1px 0px 1px;
+	display: block;
+	padding: 3px;
+}
+.menu a:link, .menu a:visited, .menu a:active{
+	color: #000000;
+	text-decoration: none;
+	background: #FFFFFF;
+}
+.menu a:hover{
+	color: #000000;
+	text-decoration: none;
+	background: #FFCC00;
+}
+.tbl{
+	background: #999999;
+}
+.tbl td{
+	background: #FFFFFF;
+}
+.tbl th{
+	background: #DDDDDD;
+}

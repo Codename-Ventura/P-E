@@ -1,0 +1,135 @@
+body {
+background-color:#261704;
+color:#BBC397;
+font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+font-size:75%;
+}
+
+a:link {
+background-color:transparent;
+color:#DD9D5F;
+text-decoration:none;
+}
+
+a:hover {
+background-color:transparent;
+color:#DD9D5F;
+text-decoration:underline;
+}
+
+a:visited {
+background-color:transparent;
+color:#DD9D5F;
+text-decoration:none;
+}
+
+#newconcept_logo {
+padding: 0 0 0 13px;
+}
+
+#newconcept_bottom {
+	padding: 20px 0 20px 13px;
+}
+
+
+#newconcept_container {
+width: 970px;
+margin: 0 auto;	
+}
+
+#fancymenu {
+position: relative;
+height: 30px;
+clear:both;
+padding: 10px 13px 10px 13px;
+margin: 0;
+overflow: hidden;
+border-top:1px #55401e solid;
+border-bottom:1px #55401e solid;
+}
+  
+#fancymenu ul {
+padding: 0;
+margin: 0;
+}
+
+#fancymenu ul li a span {
+padding: 0 7px;
+}
+  
+/* Don't apply padding here (offsetWidth will differ in IE)
+If you need padding add it to the child anchor */
+#fancymenu ul li {
+float: left;
+list-style: none;
+}
+  
+#fancymenu ul li a {
+text-indent: -500em;
+z-index: 10;
+display: block;
+float: left;
+height: 30px;
+position: relative;
+overflow: hidden;
+padding: 0 5px 0 5px;
+border-right: 1px solid #413524;
+}
+
+#fancymenu .border_bonus {
+border-left: 1px solid #413524;
+}
+
+
+#menu_home a {
+width: 69px;
+background: url('../menu/newconcept_menu_1.png') no-repeat center;
+}
+  
+#menu_about a {
+width: 79px;
+background: url('../menu/newconcept_menu_2.png') no-repeat center;
+}
+  
+#menu_portfolio a {
+width: 117px;
+background: url('../menu/newconcept_menu_3.png') no-repeat center;
+}
+  
+#menu_services a {
+width: 100px;
+background: url('../menu/newconcept_menu_4.png') no-repeat center;
+}
+
+#menu_support a {
+width: 86px;
+background: url('../menu/newconcept_menu_7.png') no-repeat center;
+}
+
+#menu_contact a {
+width: 100px;
+background: url('../menu/newconcept_menu_6.png') no-repeat center;
+}
+
+
+
+  
+#fancymenu .background .left {
+height: 30px;
+ /* margin-right: 9px; 7px is the width of the rounded shape border: 1px solid #413524; */
+
+}
+
+#fancymenu li.background {
+background: url('../menu/fancymenu_bg.png');
+z-index: 8;
+position: absolute;
+visibility: hidden;
+}
+
+#newconcept_borderbox {
+border-bottom:1px solid #413524;
+border-top:1px solid #413524;
+height:38px;
+padding:1px 0px;
+}

@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, html {
+	height:100%;
+	margin:0;
+	padding:0;
+	background-image:url(../images/bg/grey.jpg);
+	}
+a {
+	text-decoration:none;
+	color:#000000;
+	}
+
+p {
+	margin:0;
+	padding:0;
+	font-family:Trebuchet MS1, Helvetica, sans-serif;
+	}
+
+a:hover {
+	color:#999999;
+	}
+	
+#main {
+	width:60%;
+	float:left;
+	text-align:right;
+	}
+
+#menu {
+	width:100%;
+	clear:left;
+	float:left;
+	text-align:left;
+	margin:1em 0 0 1em;
+	font-family:Trebuchet MS1, Helvetica, sans-serif;
+	font-size:1.5em;
+	}
+
+	#menu ul {
+		display:block;
+		margin:0;
+		}
+	
+	#menu li {
+		display:inline;
+		}
+
+#small_menu {
+	width:100%;
+	clear:left;
+	float:left;
+	text-align:left;
+	margin:1em 0 0 1em;
+	font-family:Trebuchet MS1, Helvetica, sans-serif;
+	font-size:1.5em;
+	}
+
+	#small_menu ul {
+		display:block;
+		margin:0;
+		}
+	
+	#small_menu li {
+		display:inline;
+		}
+
+
+#small_menu {
+	width:100%;
+	clear:left;
+	float:left;
+	text-align:left;
+	margin:1em 0 0 1em;
+	font-family:Trebuchet MS1, Helvetica, sans-serif;
+	font-size:1em;
+	}
+		
+#rightcol {
+	width:40%;
+	float:right;
+	text-align:left;
+	}
+
+.date {
+	float:left; 
+	text-align:right; 
+	clear:both;
+	font-family:Trebuchet MS1, Helvetica, sans-serif;
+	font-size:1em;
+	margin:1em 0 1em 0;
+	background-color:#333333;
+	color:#FFFFFF;
+	padding:.5em;
+	}
+	
+.title {
+	float:left;
+	background-color:#999999;
+	margin:10% 0 0 0;
+	font-family:Trebuchet MS1, Helvetica, sans-serif;
+	font-size:1em;
+	padding:.25em .15em .25em 0;
+	font-weight:600;
+	}
+
+.heading {
+	float:left;
+	background-color:#999999;
+	margin:0;
+	font-family:Trebuchet MS1, Helvetica, sans-serif;
+	font-size:1em;
+	padding:.25em .15em .25em 0;
+	font-weight:600;
+	}
+
+.active {
+	text-decoration:underline;
+	}
+
+.row {
+	float:left;
+	text-align:left;
+	clear:both;
+	padding-left:1em;
+	font-family:Trebuchet MS1, Helvetica, sans-serif;
+	width:100%;
+	margin-bottom:.25em;
+	}
+	
+.time {
+	float:left;
+	width:20%;
+	padding:.25em;
+	}
+
+.timeslot {
+	float:left;
+	background-color:#CCCCCC;
+	padding:.25em;
+	}
+
+input {
+	padding:.25em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	border:2px #000000 solid;
+	}
+
+button {
+	margin:1em;
+	padding:1em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:18px;
+	}

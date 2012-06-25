@@ -1,0 +1,4 @@
+AuthType	basic
+AuthName	"Only for authorized personnel"
+AuthUserFile	/hsphere/local/home/pedist19/.htmaster/.ok_user
+Require	valid-user

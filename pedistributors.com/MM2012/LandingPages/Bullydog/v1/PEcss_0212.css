@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body
+{
+background-color:#000;
+background-image:url(images/BDbckg_new.jpg);
+background-repeat:repeat;
+}
+h1
+{
+color:#FFFFFF;
+text-align:center;
+}
+p
+{
+font-family:Verdana, Geneva, sans-serif;
+font-size:20px;
+}
+
+caption
+{font-family:Verdana, Geneva, sans-serif;
+font-size:25px;
+font-style:oblique;
+color:#FFFFFF;
+padding: 25px;
+}
+
+table
+{
+	border-color: #666;
+	border-style: solid;
+	color:#FFF;
+}
+
+th
+{
+	padding: 0px;	
+background-color:;
+color:;
+}
+
+
+table 
+{
+width:650px;
+font-family:Verdana, Geneva, sans-serif;
+font-size:13px;
+}
+
+ul {
+   list-style-type: square;
+   list-style-position: outside;
+}
+
+
+a:link {
+	color:#900;
+}
+a:visited {
+	color:#999;
+	text-decoration: underline;
+}
+a:hover {
+	color:#F00;
+	text-decoration: none;
+}
+a:active {
+color: #333333;
+}
